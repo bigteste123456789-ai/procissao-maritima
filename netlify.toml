@@ -1,0 +1,28 @@
+# Configuração do Netlify
+
+[build]
+  # Diretório base (raiz do projeto)
+  base = "."
+  
+  # Comando de build (não necessário para site estático)
+  command = "echo 'Build concluído'"
+  
+  # Diretório para publicar
+  publish = "."
+  
+  # Diretório das funções serverless
+  functions = "netlify/functions"
+
+# Variáveis de ambiente (IMPORTANTE: Configure no painel do Netlify)
+[env]
+  [env.production]
+    EMAIL_DE_ENVIO = "seu-email@gmail.com"
+    SENHA_DO_EMAIL = "sua-senha-de-app"
+    EMAIL_DE_DESTINO = "seu-email@gmail.com"
+
+# Redirecionamentos e reescritas
+[[redirects]]
+  from = "/salvar_dados.php"
+  to = "/.netlify/functions/salvar_dados"
+  status = 200
+

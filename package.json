@@ -1,0 +1,22 @@
+{
+  "name": "procissao-maritima",
+  "version": "1.0.0",
+  "description": "Site de vendas de ingressos para a Procissão Marítima de Angra dos Reis",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "procissao",
+    "maritima",
+    "angra",
+    "reis",
+    "ingressos"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  }
+}
+

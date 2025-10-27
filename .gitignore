@@ -1,0 +1,37 @@
+# Dependências Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Arquivos de dados sensíveis
+dados_usuarios.txt
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Servidor Python (não necessário no Netlify)
+servidor.py
+salvar_dados.php
+

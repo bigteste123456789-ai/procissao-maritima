@@ -1,0 +1,717 @@
+/* Variáveis de Cores */
+:root {
+    --primary-color: #003d7a;
+    --secondary-color: #0066cc;
+    --accent-color: #ff6b35;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --border-color: #ddd;
+}
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sobre h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Seção Procissão Info */
+.procissao-info {
+    padding: 4rem 0;
+}
+
+.procissao-info h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.procissao-info h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.procissao-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Imagens Responsivas */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Barcos */
+.barcos {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.barcos h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.barco-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    /* Para alinhar imagem e texto lado a lado em telas maiores */
+    flex-direction: column;
+    /* Padrão para telas menores */
+    align-items: center;
+    text-align: center;
+}
+
+.barco-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.barco-card .barco-content {
+    width: 100%;
+}
+
+.barco-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.barco-card .barco-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barco-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.barco-card .btn {
+    margin-top: 1rem;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 4rem 0;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contato>.container>p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Página de Pagamento */
+.pagamento {
+    padding: 3rem 0;
+    min-height: calc(100vh - 200px);
+    /* Garante que o conteúdo não seja muito curto */
+}
+
+.pagamento h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.barco-info {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.pagamento-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Coluna única para telas menores */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .pagamento-wrapper {
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas para telas maiores */
+    }
+}
+
+.formulario-dados,
+.metodo-pagamento,
+.formulario-pagamento {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.formulario-dados h3,
+.metodo-pagamento h3,
+.formulario-pagamento h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.formulario-dados input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.formulario-dados input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.opcoes-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opcao-pagamento:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(0, 102, 204, 0.05);
+}
+
+.opcao-pagamento input[type="radio"] {
+    margin-right: 1rem;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.opcao-pagamento span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.formulario-pagamento {
+    display: none;
+}
+
+.formulario-pagamento.ativo {
+    display: block;
+}
+
+.pix-info {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.pix-info p {
+    margin-bottom: 1rem;
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.qr-code-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--white);
+}
+
+.qr-code-placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed var(--border-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    margin: 1rem 0;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pix-chave {
+    background-color: #e8f4f8;
+    padding: 1rem;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 3px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.resumo-compra {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .barco-card {
+        flex-direction: row;
+        /* Alinha imagem e texto lado a lado em telas maiores */
+        text-align: left;
+    }
+
+    .barco-card .barco-image {
+        max-width: 40%;
+        /* Ajuste o tamanho da imagem para caber ao lado do texto */
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .barco-card .barco-content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .sobre h2,
+    .procissao-info h2,
+    .barcos h2,
+    .contato h2,
+    .pagamento h2 {
+        font-size: 2rem;
+    }
+
+    .sobre h3,
+    .procissao-info h3,
+    .barco-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .pagamento-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Estilos da Página de Confirmação --- */
+.confirmacao {
+    padding: 3rem 0;
+    min-height: calc(100vh - 200px);
+    background-color: var(--light-bg);
+}
+
+.confirmacao-wrapper {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.confirmacao-icone {
+    font-size: 4rem;
+    color: #28a745;
+    /* Verde sucesso */
+    margin-bottom: 1rem;
+}
+
+.confirmacao-wrapper h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.confirmacao-wrapper .subtitulo {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.confirmacao-detalhes,
+.confirmacao-info {
+    text-align: left;
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.confirmacao-detalhes h3,
+.confirmacao-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.confirmacao-detalhes p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.instrucoes-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.instrucoes-lista li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.instrucoes-lista li::before {
+    content: '\2713';
+    /* Check mark */
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.qr-code-container {
+    margin-bottom: 2rem;
+}
+
+.qr-code-container #qrCodeImage {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem auto 0;
+    border: 5px solid var(--border-color);
+    border-radius: 8px;
+    padding: 5px;
+    background-color: var(--white);
+}
+
+.aviso-qr {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.confirmacao-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: var(--white);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EAE53;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp .fab {
+    margin-right: 0.5rem;
+}

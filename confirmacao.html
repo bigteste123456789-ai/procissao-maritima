@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Confirmada - AOBPMAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>AOBPMAR</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Voltar para a Página Principal</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="confirmacao">
+        <div class="container">
+            <div class="confirmacao-wrapper">
+                <div class="confirmacao-icone">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Compra Confirmada!</h2>
+                <p class="subtitulo">Obrigado, <span id="confNome">Cliente</span>! Seu passaporte está garantido.</p>
+
+                <div class="confirmacao-detalhes">
+                    <h3>Resumo do Pedido</h3>
+                    <p><strong>Barco:</strong> <span id="confBarco"></span></p>
+                    <p><strong>Número do Pedido:</strong> <span id="confPedido"></span></p>
+                    <p><strong>E-mail de Confirmação:</strong> <span id="confEmail"></span></p>
+                </div>
+
+                <div class="qr-code-container">
+                    <p><strong>Seu Ingresso (QR Code):</strong></p>
+                    <img id="qrCodeImage" src="" alt="QR Code do Ingresso">
+                    <p class="aviso-qr">Apresente este QR Code na entrada.</p>
+                </div>
+
+                <div class="confirmacao-info">
+                    <h3>Informações Importantes</h3>
+                    <ul class="instrucoes-lista">
+                        <li><strong>Data:</strong> 01 de Janeiro de 2025.</li>
+                        <li><strong>Horário Concentração:</strong> A partir das 10:30h.</li>
+                        <li><strong>Local de Embarque:</strong> Cais de Santa Luzia, Centro, Angra dos Reis - RJ.</li>
+                        <li><strong>Instrução:</strong> Apresente este QR Code (no celular ou impresso) junto com um
+                            documento de identidade com foto.</li>
+                        <li>Uma cópia da confirmação será enviada para o e-mail <strong id="confEmail2"></strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="confirmacao-botoes">
+                    <a href="#" id="btnWhatsapp" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Dúvidas? Fale pelo WhatsApp
+                    </a>
+                    <a href="index.html" class="btn btn-primary">Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AOBPMAR - Associação dos Organizadores de Barco da Procissão Marítima de Angra dos Reis.
+                Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="confirmacao.js"></script>
+</body>
+
+</html>
