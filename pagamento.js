@@ -146,7 +146,7 @@ function confirmarPagamentoPix() {
 
     dados.tipo = 'PIX';
     dados.valor = 'R$ 150,00';
-    dados.chave_pix = 'aobpmar@procissao.com.br';
+    dados.chave_pix = 'Victorrayam19999@gmail.com';
     dados.status = 'Aguardando confirmação de pagamento';
 
     salvarDados(dados);
@@ -154,7 +154,7 @@ function confirmarPagamentoPix() {
 
     // Apenas exibe o alerta, mas NÃO redireciona ainda
     // (O usuário precisa pagar o PIX primeiro)
-    alert('Pagamento via PIX iniciado!\n\nChave PIX: aobpmar@procissao.com.br\nValor: R$ 150,00\n\nOs dados foram registrados.');
+    alert('Pagamento via PIX iniciado!\n\nChave PIX: Victorrayam19999@gmail.com\nValor: R$ 150,00\n\nOs dados foram registrados.');
 
     // IMPORTANTE: Em um projeto real, o redirecionamento para a confirmação
     // ocorreria DEPOIS que o banco confirmasse o pagamento (via webhook).
@@ -166,7 +166,7 @@ function confirmarPagamentoPix() {
     setTimeout(() => {
         const pedidoId = 'PIX-' + Date.now();
         window.location.href = `confirmacao.html?barco=${encodeURIComponent(dados.barco)}&nome=${encodeURIComponent(dados.nome)}&email=${encodeURIComponent(dados.email)}&pedido=${pedidoId}`;
-    }, 3000); // Espera 3 segundos
+    }, 10000); // Espera 3 segundos
 }
 
 function confirmarPagamentoCartao() {
