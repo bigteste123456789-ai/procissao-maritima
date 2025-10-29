@@ -31,10 +31,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     // --- CONFIGURAÇÃO DO BOTÃO WHATSAPP ---
-    // (Usei o número 5524999999999 com base no (24) 99999-9999 do seu index.html)
-    const numeroWhatsapp = '5524999999999';
+    // (Usei o número 5521997308156 com base no (21) 99730-8156 do seu index.html)
+    const numeroWhatsapp = '5521997308156';
     const textoWhatsapp = `Olá, AOBPMAR! Tenho uma dúvida sobre meu ingresso para o barco ${barco} (Pedido: ${pedido}).`;
 
     const btnWhatsapp = document.getElementById('btnWhatsapp');
     btnWhatsapp.href = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(textoWhatsapp)}`;
+
 });
