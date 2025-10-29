@@ -166,7 +166,7 @@ function confirmarPagamentoPix() {
     setTimeout(() => {
         const pedidoId = 'PIX-' + Date.now();
         window.location.href = `confirmacao.html?barco=${encodeURIComponent(dados.barco)}&nome=${encodeURIComponent(dados.nome)}&email=${encodeURIComponent(dados.email)}&pedido=${pedidoId}`;
-    }, 10000); // Espera 3 segundos
+    }, 90000); // Espera 3 segundos
 }
 
 function confirmarPagamentoCartao() {
